@@ -28,7 +28,25 @@ describe('Giphy Tests', () => {
         expect(alttext).to.eq(GIFheadertext);
     })
 })
+it.only('Share GIF', () => {
+    // Given I visit http://giphy.com
+    cy.visit('http://giphy.com');
+
+    // When I click on a "Share"
+    cy.wait(1600);
+    cy.get('[class="Button-sc-1m41keg eYFesC"]').eq(1)
+  
+
+    // Then the GIF url for the GIF clicked should load on the next page
+//     cy.get('[class="_2UR91XUlAgSU4ZwhD-hyNs _1KuKUOaTOA-MDxUbnxAF0-"]')
+//     .invoke('text')
+//     .should((GIFheadertext) => {
+//     expect(alttext).to.eq(GIFheadertext);
+// })
+    })
+
 
     })
 
 });
+//})
